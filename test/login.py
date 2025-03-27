@@ -5,6 +5,7 @@ from fixtures.users import *
 
 def test_login():
     token = login(userOne['username'], userOne['password'])
+    print(token)
     assert token is not None
 
 def test_login_invalid_credentials():

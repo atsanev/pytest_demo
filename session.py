@@ -1,10 +1,15 @@
 import requests
 
 class APIClient:
-    def __init__(self, base_url, username, password):
+    def __init__(self, base_url, username=None, password=None, token=None):
         self.base_url = base_url
         self.session = requests.Session()
-        self.token = self.authenticate(username, password)
+        if username and password:
+            self.token = self.authenticate(username, password)
+        elif token:
+            self.token = token
+        else:
+            raise ValueError("Either username/password or token must be provided")
 
     def authenticate(self, username, password):
         login_url = f"{self.base_url}/login"

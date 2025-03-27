@@ -8,6 +8,8 @@ def login(username=None, password=None):
     if password is None:
         password = userOne['password']
 
-    token = APIClient(baseUrl, username, password)
+
+    client = APIClient(baseUrl, username, password)
+    token = client.authenticate(username, password)
     return token
 

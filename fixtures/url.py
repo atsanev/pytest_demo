@@ -1,5 +1,7 @@
 
-baseUrl = "https://api-to-test.onrender.com"
+#baseUrl = "https://api-to-test.onrender.com"
+
+baseUrl = "http://localhost:3000"
 
 login = baseUrl+"/login"
 
