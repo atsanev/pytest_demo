@@ -1,9 +1,9 @@
 userOne = {
-    "username": "testuser1.com",
+    "username": "testuser1",
     "password": "password123"
 }
 
 userTwo = {
-    "username": "testuser2.com",
-    "password": "mypassword"
+    "username": "testuser2",
+    "password": "password123"
 }
